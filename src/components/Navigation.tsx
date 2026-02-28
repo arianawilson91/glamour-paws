@@ -19,7 +19,7 @@ export default function Navigation() {
                 Glamour Paws
               </span>
               <p className="text-xs text-warm-gray -mt-0.5">
-                Paws down ~ the best in town!
+                Premium Pet Care · SW Florida
               </p>
             </div>
           </Link>
