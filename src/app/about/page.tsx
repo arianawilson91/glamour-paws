@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Us | Glamour Paws",
@@ -75,6 +76,10 @@ export default function AboutPage() {
           <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
             A boutique pet care experience in Southwest Florida where every pet is treated like family.
           </p>
+          <div className="mt-8 flex justify-center gap-4 max-w-3xl mx-auto">
+            <Image src="/images/dog-grooming-shop.jpg" alt="Inside Glamour Paws" width={400} height={300} className="rounded-2xl shadow-lg flex-1 object-cover max-h-64" />
+            <Image src="/images/fort-myers-location.jpg" alt="Glamour Paws Fort Myers" width={300} height={300} className="rounded-2xl shadow-lg hidden sm:block flex-1 object-cover max-h-64" />
+          </div>
         </div>
       </section>
 
@@ -282,6 +287,9 @@ export default function AboutPage() {
               went directly to local shelters. We believe in supporting the animals and community
               that make Southwest Florida so special.
             </p>
+          </div>
+          <div className="mt-10 flex justify-center">
+            <Image src="/images/doggie-daycare.jpg" alt="Happy dogs at Glamour Paws daycare" width={700} height={400} className="rounded-2xl shadow-lg object-cover max-h-80" />
           </div>
         </div>
       </section>

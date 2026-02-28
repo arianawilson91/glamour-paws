@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Cat,
@@ -41,6 +42,10 @@ export default function CatGroomingPage() {
             Professional feline grooming services in a calm, stress-free
             environment. Your cat deserves to look and feel fabulous too.
           </p>
+          <div className="mt-8 flex justify-center gap-6">
+            <Image src="/images/cat-grooming.png" alt="Cat grooming at Glamour Paws" width={300} height={200} className="rounded-2xl shadow-lg" />
+            <Image src="/images/cat-photo.jpg" alt="Cat with lion cut" width={200} height={200} className="rounded-2xl shadow-lg hidden sm:block object-cover" />
+          </div>
         </div>
       </section>
 

@@ -13,9 +13,7 @@ export default function Navigation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-xl font-bold">
-              GP
-            </div>
+            <img src="/images/logo.png" alt="Glamour Paws" className="h-10 w-auto" />
             <div>
               <span className="font-[var(--font-display)] text-xl font-bold text-dark">
                 Glamour Paws

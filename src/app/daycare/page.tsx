@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Sun,
@@ -95,6 +96,9 @@ export default function DaycarePage() {
             Cage-free, supervised play in a safe, fun environment. Your pup will come home happy,
             tired, and ready for cuddles.
           </p>
+          <div className="mt-8 max-w-2xl mx-auto">
+            <Image src="/images/doggie-daycare.jpg" alt="Dogs enjoying daycare at Glamour Paws" width={600} height={300} className="rounded-2xl shadow-lg" />
+          </div>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:2392259665"
@@ -173,6 +177,10 @@ export default function DaycarePage() {
             <p className="mt-4 text-warm-gray leading-relaxed">
               Every day is packed with enrichment, socialization, and safe supervised fun.
             </p>
+          </div>
+
+          <div className="mb-12 max-w-3xl mx-auto">
+            <Image src="/images/dog-daycare-2.jpg" alt="Dogs playing together in daycare at Glamour Paws" width={800} height={500} className="rounded-2xl shadow-md w-full h-auto" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

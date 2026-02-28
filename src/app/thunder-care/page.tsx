@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Zap,
@@ -116,6 +117,9 @@ export default function ThunderCarePage() {
             A safe, comfortable haven for dogs who suffer from storm and noise phobias.
             Because no pup should have to weather the storm alone.
           </p>
+          <div className="mt-8 max-w-md mx-auto">
+            <Image src="/images/about-glamour-paws.jpg" alt="Happy dog at Glamour Paws" width={400} height={300} className="rounded-2xl shadow-lg" />
+          </div>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:2392259665"

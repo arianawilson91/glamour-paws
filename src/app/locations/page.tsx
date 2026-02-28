@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { DAYS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -51,6 +52,7 @@ export default function LocationsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* Cape Coral */}
             <div className="bg-white rounded-2xl shadow-sm border border-cream-dark overflow-hidden">
+              <Image src="/images/cape-coral-location.jpg" alt="Glamour Paws Cape Coral storefront" width={600} height={400} className="w-full h-56 object-cover rounded-t-2xl" />
               <div className="bg-gradient-to-r from-pink to-pink-light p-6">
                 <h2 className="text-2xl font-bold text-white">Cape Coral</h2>
                 <p className="text-sm text-white/80 mt-1">Primary Location</p>
@@ -138,6 +140,7 @@ export default function LocationsPage() {
 
             {/* Fort Myers */}
             <div className="bg-white rounded-2xl shadow-sm border border-cream-dark overflow-hidden">
+              <Image src="/images/fort-myers-location.jpg" alt="Glamour Paws Fort Myers storefront" width={600} height={400} className="w-full h-56 object-cover rounded-t-2xl" />
               <div className="bg-gradient-to-r from-primary to-primary-dark p-6">
                 <h2 className="text-2xl font-bold text-white">Fort Myers</h2>
                 <p className="text-sm text-white/80 mt-1">Original Location &mdash; Est. 2014</p>

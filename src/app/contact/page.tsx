@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -106,6 +107,9 @@ export default function ContactPage() {
           <p className="mt-4 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
             Have a question or ready to book? Reach out and we will get back to you as soon as possible.
           </p>
+          <div className="mt-6 max-w-md mx-auto">
+            <Image src="/images/about-glamour-paws.jpg" alt="Happy pup at Glamour Paws" width={400} height={300} className="rounded-2xl shadow-lg" />
+          </div>
         </div>
       </section>
 
@@ -286,7 +290,9 @@ export default function ContactPage() {
             {/* Right: Location Info */}
             <div className="space-y-8">
               {/* Cape Coral */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-cream-dark">
+              <div className="bg-white rounded-2xl shadow-sm border border-cream-dark overflow-hidden">
+                <Image src="/images/cape-coral-location.jpg" alt="Glamour Paws Cape Coral storefront" width={600} height={200} className="w-full h-32 object-cover rounded-t-xl" />
+                <div className="p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                     <MapPin className="h-5 w-5 text-primary" />
@@ -335,10 +341,13 @@ export default function ContactPage() {
                   <ExternalLink className="h-4 w-4" />
                   Get Directions on Google Maps
                 </a>
+                </div>
               </div>
 
               {/* Fort Myers */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-cream-dark">
+              <div className="bg-white rounded-2xl shadow-sm border border-cream-dark overflow-hidden">
+                <Image src="/images/fort-myers-location.jpg" alt="Glamour Paws Fort Myers storefront" width={600} height={200} className="w-full h-32 object-cover rounded-t-xl" />
+                <div className="p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-pink/10">
                     <MapPin className="h-5 w-5 text-pink" />
@@ -387,6 +396,7 @@ export default function ContactPage() {
                   <ExternalLink className="h-4 w-4" />
                   Get Directions on Google Maps
                 </a>
+                </div>
               </div>
 
               {/* Quick Call Card */}

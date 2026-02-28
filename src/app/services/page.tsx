@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Sparkles,
@@ -33,6 +34,9 @@ export default function ServicesPage() {
             From full grooming to overnight boarding, we offer a complete range
             of premium pet care services.
           </p>
+          <div className="mt-8 max-w-lg mx-auto">
+            <Image src="/images/dog-grooming-bath.jpg" alt="Dog getting pampered at Glamour Paws" width={500} height={250} className="rounded-2xl shadow-lg" />
+          </div>
         </div>
       </section>
 
@@ -202,6 +206,10 @@ export default function ServicesPage() {
                 Full bath service for your feline friend.
               </p>
             </div>
+          </div>
+
+          <div className="mt-8">
+            <Image src="/images/cat-grooming.png" alt="Cat grooming at Glamour Paws" width={500} height={250} className="rounded-2xl" />
           </div>
 
           <div className="mt-6 sm:hidden">

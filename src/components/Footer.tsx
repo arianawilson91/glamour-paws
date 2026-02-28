@@ -10,9 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white text-lg font-bold">
-                GP
-              </div>
+              <img src="/images/logo-alt.png" alt="Glamour Paws" className="h-10 w-auto" />
               <span className="text-xl font-bold">Glamour Paws</span>
             </div>
             <p className="text-sm text-white/70 leading-relaxed">

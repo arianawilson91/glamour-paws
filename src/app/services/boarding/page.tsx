@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Moon,
@@ -83,6 +84,9 @@ export default function BoardingPage() {
             A home away from home for your pet. Available around the clock,
             every day of the year, with supervised play and comfortable kennels.
           </p>
+          <div className="mt-8 max-w-lg mx-auto">
+            <Image src="/images/dog-grooming-shop.jpg" alt="Glamour Paws facility interior" width={500} height={350} className="rounded-2xl shadow-lg" />
+          </div>
         </div>
       </section>
 

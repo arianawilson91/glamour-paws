@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Sparkles,
@@ -85,6 +86,10 @@ export default function DogGroomingPage() {
             The complete pampering experience for your pup. From a refreshing
             bath to a styled haircut, we make every dog look and feel their best.
           </p>
+          <div className="mt-8 flex justify-center gap-6">
+            <Image src="/images/dog-grooming-bath.jpg" alt="Dog bath at Glamour Paws" width={300} height={200} className="rounded-2xl shadow-lg" />
+            <Image src="/images/fort-myers-grooming.jpg" alt="Beautifully groomed dogs" width={200} height={200} className="rounded-2xl shadow-lg hidden sm:block" />
+          </div>
         </div>
       </section>
 

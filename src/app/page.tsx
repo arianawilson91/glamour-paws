@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Scissors,
@@ -171,65 +172,76 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9InAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMS41IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCBmaWxsPSJ1cmwoI3ApIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+PC9zdmc+')] opacity-50" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-          <div className="max-w-3xl">
-            {/* Badge */}
-            <motion.div variants={fadeInUp} custom={0}>
-              <span className="inline-flex items-center gap-2 rounded-full bg-gold/20 px-4 py-1.5 text-sm font-medium text-gold mb-8">
-                <Award className="h-4 w-4" />
-                Neighborhood Favorite 2022 &amp; 2023
-              </span>
-            </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-3xl">
+              {/* Badge */}
+              <motion.div variants={fadeInUp} custom={0}>
+                <span className="inline-flex items-center gap-2 rounded-full bg-gold/20 px-4 py-1.5 text-sm font-medium text-gold mb-8">
+                  <Award className="h-4 w-4" />
+                  Neighborhood Favorite 2022 &amp; 2023
+                </span>
+              </motion.div>
 
-            {/* Headline */}
-            <motion.h1
-              variants={fadeInUp}
-              custom={1}
-              className="font-[var(--font-display)] text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight"
-            >
-              Fort Myers &amp; Cape Coral&rsquo;s Most Trusted{" "}
-              <span className="text-lavender">Pet Groomer</span>
-            </motion.h1>
-
-            {/* Subheading */}
-            <motion.p
-              variants={fadeInUp}
-              custom={2}
-              className="mt-6 text-lg sm:text-xl text-white/80 max-w-xl leading-relaxed"
-            >
-              Where every pet gets the royal treatment. Premium grooming,
-              cage-free daycare, and overnight boarding in Southwest Florida.
-            </motion.p>
-
-            {/* CTAs */}
-            <motion.div
-              variants={fadeInUp}
-              custom={3}
-              className="mt-10 flex flex-col sm:flex-row gap-4"
-            >
-              <a
-                href="tel:2392259665"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-pink px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-pink/90 transition-all hover:shadow-xl"
+              {/* Headline */}
+              <motion.h1
+                variants={fadeInUp}
+                custom={1}
+                className="font-[var(--font-display)] text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight"
               >
-                <Phone className="h-5 w-5" />
-                Book an Appointment
-              </a>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center rounded-full border-2 border-white/30 px-8 py-4 text-base font-semibold text-white hover:bg-white/10 transition-all"
-              >
-                View Our Services
-              </Link>
-            </motion.div>
+                Fort Myers &amp; Cape Coral&rsquo;s Most Trusted{" "}
+                <span className="text-lavender">Pet Groomer</span>
+              </motion.h1>
 
-            {/* Phone number */}
-            <motion.p
-              variants={fadeInUp}
-              custom={4}
-              className="mt-6 flex items-center gap-2 text-white/60 text-sm"
-            >
-              <Phone className="h-4 w-4" />
-              Call now: (239) 225-9665
-            </motion.p>
+              {/* Subheading */}
+              <motion.p
+                variants={fadeInUp}
+                custom={2}
+                className="mt-6 text-lg sm:text-xl text-white/80 max-w-xl leading-relaxed"
+              >
+                Where every pet gets the royal treatment. Premium grooming,
+                cage-free daycare, and overnight boarding in Southwest Florida.
+              </motion.p>
+
+              {/* CTAs */}
+              <motion.div
+                variants={fadeInUp}
+                custom={3}
+                className="mt-10 flex flex-col sm:flex-row gap-4"
+              >
+                <a
+                  href="tel:2392259665"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-pink px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-pink/90 transition-all hover:shadow-xl"
+                >
+                  <Phone className="h-5 w-5" />
+                  Book an Appointment
+                </a>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-white/30 px-8 py-4 text-base font-semibold text-white hover:bg-white/10 transition-all"
+                >
+                  View Our Services
+                </Link>
+              </motion.div>
+
+              {/* Phone number */}
+              <motion.p
+                variants={fadeInUp}
+                custom={4}
+                className="mt-6 flex items-center gap-2 text-white/60 text-sm"
+              >
+                <Phone className="h-4 w-4" />
+                Call now: (239) 225-9665
+              </motion.p>
+            </div>
+
+            <motion.div variants={fadeInUp} custom={3} className="hidden lg:block">
+              <div className="relative">
+                <Image src="/images/dog-grooming-shop.jpg" alt="Glamour Paws grooming facility" width={600} height={450} className="rounded-3xl shadow-2xl" />
+                <div className="absolute -bottom-4 -left-4 bg-pink rounded-2xl px-6 py-3 shadow-lg">
+                  <p className="text-white font-semibold text-sm">Since 2014</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
 
@@ -372,25 +384,21 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Right column - decorative card with quote */}
+            {/* Right column - photo with quote overlay */}
             <motion.div variants={fadeInUp} custom={2} className="relative">
-              <div className="bg-gradient-to-br from-lavender-light to-pink-soft rounded-3xl p-12 text-center">
-                <div className="mx-auto w-32 h-32 mb-6 opacity-20 text-primary">
-                  <PawPrint />
+              <div className="relative rounded-3xl overflow-hidden">
+                <Image src="/images/doggie-daycare.jpg" alt="Happy dogs at Glamour Paws daycare" width={600} height={400} className="w-full h-auto object-cover" />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/80 to-transparent p-8">
+                  <div className="flex gap-1 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-gold text-gold" />
+                    ))}
+                  </div>
+                  <blockquote className="font-[var(--font-display)] text-xl text-white italic">
+                    &ldquo;Paws down ~ the best in town!&rdquo;
+                  </blockquote>
+                  <p className="mt-2 text-sm text-white/70">Voted Nextdoor Neighborhood Favorite</p>
                 </div>
-                <Stars />
-                <blockquote className="mt-4 font-[var(--font-display)] text-2xl text-dark italic">
-                  &ldquo;Paws down ~ the best in town!&rdquo;
-                </blockquote>
-                <p className="mt-4 text-sm text-warm-gray">
-                  Voted Nextdoor Neighborhood Favorite
-                </p>
-                <div className="flex justify-center mt-3">
-                  <Heart className="h-5 w-5 text-pink fill-pink" />
-                </div>
-                <p className="mt-6 text-sm font-medium text-dark">
-                  Serving Cape Coral &amp; Fort Myers since 2014
-                </p>
               </div>
             </motion.div>
           </div>
@@ -503,78 +511,84 @@ export default function Home() {
             <motion.div
               variants={fadeInUp}
               custom={0}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-cream-dark"
+              className="bg-white rounded-2xl shadow-sm border border-cream-dark overflow-hidden"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                  <MapPin className="h-5 w-5 text-primary" />
+              <Image src="/images/cape-coral-location.jpg" alt="Glamour Paws Cape Coral" width={500} height={300} className="w-full h-48 object-cover" />
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-dark">Cape Coral</h3>
                 </div>
-                <h3 className="text-xl font-bold text-dark">Cape Coral</h3>
-              </div>
-              <address className="not-italic text-warm-gray space-y-2 text-sm">
-                <p>1715 Cape Coral Pkwy W, #17</p>
-                <p>Cape Coral, FL 33914</p>
-                <p className="text-xs text-warm-gray/70">
-                  In the Lobster Lady Plaza
-                </p>
-              </address>
-              <div className="mt-4 pt-4 border-t border-cream-dark">
-                <div className="flex items-center gap-2 mb-1">
-                  <Clock className="h-4 w-4 text-primary" />
-                  <p className="text-sm font-medium text-dark">Hours</p>
+                <address className="not-italic text-warm-gray space-y-2 text-sm">
+                  <p>1715 Cape Coral Pkwy W, #17</p>
+                  <p>Cape Coral, FL 33914</p>
+                  <p className="text-xs text-warm-gray/70">
+                    In the Lobster Lady Plaza
+                  </p>
+                </address>
+                <div className="mt-4 pt-4 border-t border-cream-dark">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Clock className="h-4 w-4 text-primary" />
+                    <p className="text-sm font-medium text-dark">Hours</p>
+                  </div>
+                  <p className="text-sm text-warm-gray">Mon-Fri: 8am - 6pm</p>
+                  <p className="text-sm text-warm-gray">
+                    Sat: 8am - 3pm | Sun: Closed
+                  </p>
                 </div>
-                <p className="text-sm text-warm-gray">Mon-Fri: 8am - 6pm</p>
-                <p className="text-sm text-warm-gray">
-                  Sat: 8am - 3pm | Sun: Closed
-                </p>
+                <a
+                  href="tel:2392259665"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
+                >
+                  <Phone className="h-4 w-4" />
+                  (239) 225-9665
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
-              <a
-                href="tel:2392259665"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
-              >
-                <Phone className="h-4 w-4" />
-                (239) 225-9665
-                <ArrowRight className="h-4 w-4" />
-              </a>
             </motion.div>
 
             {/* Fort Myers */}
             <motion.div
               variants={fadeInUp}
               custom={1}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-cream-dark"
+              className="bg-white rounded-2xl shadow-sm border border-cream-dark overflow-hidden"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                  <MapPin className="h-5 w-5 text-primary" />
+              <Image src="/images/fort-myers-location.jpg" alt="Glamour Paws Fort Myers" width={500} height={300} className="w-full h-48 object-cover" />
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-dark">Fort Myers</h3>
                 </div>
-                <h3 className="text-xl font-bold text-dark">Fort Myers</h3>
-              </div>
-              <address className="not-italic text-warm-gray space-y-2 text-sm">
-                <p>6810 Shoppes at Plantation Dr, #10</p>
-                <p>Fort Myers, FL 33912</p>
-                <p className="text-xs text-warm-gray/70">
-                  Shoppes at Plantation Plaza
-                </p>
-              </address>
-              <div className="mt-4 pt-4 border-t border-cream-dark">
-                <div className="flex items-center gap-2 mb-1">
-                  <Clock className="h-4 w-4 text-primary" />
-                  <p className="text-sm font-medium text-dark">Hours</p>
+                <address className="not-italic text-warm-gray space-y-2 text-sm">
+                  <p>6810 Shoppes at Plantation Dr, #10</p>
+                  <p>Fort Myers, FL 33912</p>
+                  <p className="text-xs text-warm-gray/70">
+                    Shoppes at Plantation Plaza
+                  </p>
+                </address>
+                <div className="mt-4 pt-4 border-t border-cream-dark">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Clock className="h-4 w-4 text-primary" />
+                    <p className="text-sm font-medium text-dark">Hours</p>
+                  </div>
+                  <p className="text-sm text-warm-gray">Mon-Fri: 6am - 6pm</p>
+                  <p className="text-sm text-warm-gray">
+                    Sat: 8am - 4pm | Sun: Closed
+                  </p>
                 </div>
-                <p className="text-sm text-warm-gray">Mon-Fri: 6am - 6pm</p>
-                <p className="text-sm text-warm-gray">
-                  Sat: 8am - 4pm | Sun: Closed
-                </p>
+                <a
+                  href="tel:2392259663"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
+                >
+                  <Phone className="h-4 w-4" />
+                  (239) 225-9663
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
-              <a
-                href="tel:2392259663"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
-              >
-                <Phone className="h-4 w-4" />
-                (239) 225-9663
-                <ArrowRight className="h-4 w-4" />
-              </a>
             </motion.div>
           </div>
 
